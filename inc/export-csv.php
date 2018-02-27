@@ -98,8 +98,8 @@ class Expoert_CSV{
                         continue;
                     }
 
-                   $data[$i][$key] = str_replace( array('&quot;','&#039;','&#047;','&#092;')
-                    , array('"',"'",'/','\\'), $value );
+                   $data[$i][$key] = str_replace( array('&quot;','&#039;','&#047;','&#092;',"\n","\r")
+                    , array('"',"'",'/','\\','',''), $value );
 
                 endforeach;
 
